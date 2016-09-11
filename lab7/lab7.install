@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Implements hook_install()
+ */
+
+function lab7_install(){
+  $lab7_config = \Drupal::config('lab7.system.site');
+
+  $system_site_config = \Drupal::configFactory()->getEditable('system.site');
+  $system_site_config->set('name', $lab7_config->get('name'));
+  $system_site_config->set('mail', $lab7_config->get('mail'));
+  $system_site_config->set('page.front', $lab7_config->get('page.front'));
+
+  $system_site_config->save();
+}

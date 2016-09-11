@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains lab7.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function lab7_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the lab7 module.
+    case 'help.page.lab7':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Drupal School Lab 7') . '</p>';
+      return $output;
+
+    default:
+  }
+}

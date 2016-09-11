@@ -1,0 +1,5 @@
+name: lab7
+type: module
+description: Drupal School Lab 7
+core: 8.x
+package: Custom
